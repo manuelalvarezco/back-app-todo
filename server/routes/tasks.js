@@ -49,7 +49,7 @@ app.post('/tasks', verifyToken, (req, res) => {
         expiration: body.expiration,
         daysEpiration: body.daysEpiration,
         status: body.status,
-        user: req.user.id
+        user: body.user
     })
 
     task.save((err, taskDB) => {
